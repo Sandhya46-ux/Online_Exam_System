@@ -57,8 +57,7 @@ Online_Exam_System/
 │
 └── Main.java
 
-yaml
-Copy code
+
 
 ---
 
@@ -92,6 +91,7 @@ CREATE TABLE results (
     username VARCHAR(50),
     score INT
 );
+
 How to Run the Project
 Prerequisites
 JDK 8 or above
@@ -101,57 +101,40 @@ MySQL installed and running
 MySQL Connector/J (JDBC driver)
 
 Configure Database Connection
-Update database credentials in:
+Update database credentials in: src/dao/DBConnection.java
 
-bash
-Copy code
-src/dao/DBConnection.java
 java
-Copy code
+
 jdbc:mysql://localhost:3306/online_exam
 username: root
 password: YOUR_MYSQL_PASSWORD
+
 Compile the Project
 From the project root directory:
-
-bash
-Copy code
 javac -cp "lib/mysql-connector-j-9.5.0.jar;src" src/dao/*.java src/model/*.java src/service/*.java src/Main.java
 Run the Project
-bash
-Copy code
 java -cp "lib/mysql-connector-j-9.5.0.jar;src" Main
+
 Sample Login
 Insert a user into the database:
-
-sql
-Copy code
 INSERT INTO users (username, password)
 VALUES ('sandhya', '1234');
-Login using:
 
-yaml
-Copy code
+Login using:
 Username: sandhya
 Password: 1234
+
 Output
 Questions are displayed one by one
-
 User selects answers using A/B/C/D
-
 Final score is displayed
-
 Score is saved in the database
 
 Learning Outcomes
 Practical implementation of JDBC
-
 Database-driven Java application
-
 File handling in Java
-
 Modular and layered project structure
-
 Debugging real runtime errors
 
 Author
@@ -163,9 +146,6 @@ GitHub: https://github.com/Sandhya46-ux
 Note
 Database credentials are not included for security reasons.
 Please update them locally before running the project.
-
-yaml
-Copy code
 
 ---
 
