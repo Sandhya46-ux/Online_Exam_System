@@ -1,0 +1,4 @@
+Welcome to the Online Examination System
+Each question carries 1 mark
+No negative marking
+Time limit: 60 seconds
